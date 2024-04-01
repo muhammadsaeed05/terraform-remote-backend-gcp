@@ -1,9 +1,9 @@
 
 terraform {
   backend "gcs" {
-    bucket      = "tfstate_remote_backend_bucket"
+    bucket      = "your-bucket-name"
     prefix      = "terraform/state"
-    credentials = "credentials/key.json"
+    credentials = file("path/to/service-account.json")
   }
 
 }
